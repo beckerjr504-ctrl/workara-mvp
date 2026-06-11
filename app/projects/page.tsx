@@ -17,12 +17,28 @@ export default function ProjectsPage() {
   const [showForm, setShowForm] = useState(false)
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
+  const [appliedProjects, setAppliedProjects] = useState<string[]>([])
 
   useEffect(() => {
     fetch("/api/projects")
       .then((r) => r.json())
       .then(setProjects)
+
+    const stored = typeof window !== "undefined" ? localStorage.getItem("appliedProjects") : null
+    if (stored) setAppliedProjects(JSON.parse(stored))
   }, [])
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("appliedProjects", JSON.stringify(appliedProjects))
+    }
+  }, [appliedProjects])
+
+  function handleApply(projectId: string) {
+    if (appliedProjects.includes(projectId)) return
+    setAppliedProjects((current) => [...current, projectId])
+    setSuccess("Postulación enviada. ¡Listo para matching!")
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -146,6 +162,13 @@ export default function ProjectsPage() {
                 <span className="rounded-full bg-slate-900/80 px-3 py-1 text-slate-200">{project.status}</span>
                 <span className="text-slate-500">Publicado el {new Date(project.createdAt).toLocaleDateString("es-ES")}</span>
               </div>
+              <button
+                onClick={() => handleApply(project.id)}
+                disabled={appliedProjects.includes(project.id)}
+                className={`mt-6 inline-flex items-center justify-center rounded-3xl px-5 py-3 text-sm font-semibold transition ${appliedProjects.includes(project.id) ? "bg-slate-700 text-slate-400 cursor-not-allowed" : "bg-emerald-500 text-slate-950 hover:bg-emerald-400"}`}
+              >
+                {appliedProjects.includes(project.id) ? "Postulado" : "Postularme"}
+              </button>
             </article>
           ))}
         </div>
