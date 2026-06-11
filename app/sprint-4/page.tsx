@@ -42,10 +42,10 @@ export default function Sprint4Page() {
               <article className="rounded-[1.75rem] border border-white/10 bg-slate-950/70 p-6">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Oferta</p>
+                    <p className="text-sm uppercase tracking-[0.3em] text-emerald-300">Oferta</p>
                     <h3 className="mt-3 text-2xl font-semibold text-white">Diseño UI/UX</h3>
                   </div>
-                  <span className="rounded-full bg-cyan-500/15 px-3 py-1 text-sm text-cyan-200">Alta afinidad</span>
+                  <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-sm text-emerald-200">Alta afinidad</span>
                 </div>
                 <p className="mt-4 text-slate-400">
                   Las empresas publican requisitos, y el sistema destaca freelances con skills y valoraciones relevantes.

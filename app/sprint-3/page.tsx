@@ -57,7 +57,7 @@ export default function Sprint3Page() {
               ].map((freelancer) => (
                 <article key={freelancer.name} className="rounded-[1.75rem] border border-white/10 bg-slate-950/70 p-6">
                   <div className="flex items-center gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-cyan-500/15 text-2xl text-cyan-300">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-emerald-500/15 text-2xl text-emerald-300">
                       {freelancer.name.split(" ").map((n) => n[0]).join("")}
                     </div>
                     <div>
@@ -76,7 +76,7 @@ export default function Sprint3Page() {
                       </div>
                     ))}
                   </div>
-                  <button className="mt-6 inline-flex items-center justify-center rounded-3xl bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400">
+                  <button className="mt-6 inline-flex items-center justify-center rounded-3xl bg-emerald-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400">
                     Ver servicios
                   </button>
                 </article>

@@ -32,7 +32,7 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-slate-950 px-4 py-10 sm:px-6 lg:px-8">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.3fr_0.9fr] items-center">
         <section className="space-y-6 text-slate-100">
-          <span className="inline-flex rounded-full bg-violet-500/15 px-4 py-1 text-sm font-semibold text-violet-200 ring-1 ring-violet-500/20">
+          <span className="inline-flex rounded-full bg-emerald-500/15 px-4 py-1 text-sm font-semibold text-emerald-200 ring-1 ring-emerald-500/20">
             Sprint 2 · Registro profesional
           </span>
           <div className="space-y-4">
@@ -45,7 +45,7 @@ export default function RegisterPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-[2rem] border border-slate-800/70 bg-slate-900/70 p-6">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Claridad</h2>
+              <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">Claridad</h2>
               <p className="mt-3 text-sm leading-7 text-slate-400">Formulario intuitivo y fácil de completar.</p>
             </div>
             <div className="rounded-[2rem] border border-slate-800/70 bg-slate-900/70 p-6">
@@ -67,7 +67,7 @@ export default function RegisterPage() {
                 name="name"
                 type="text"
                 placeholder="Ej. Ana Pérez"
-                className="w-full rounded-3xl border border-slate-700 bg-slate-950/70 px-4 py-3 text-slate-100 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-400/20"
+                className="w-full rounded-3xl border border-slate-700 bg-slate-950/70 px-4 py-3 text-slate-100 outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20"
                 required
               />
             </label>
@@ -77,7 +77,7 @@ export default function RegisterPage() {
                 name="email"
                 type="email"
                 placeholder="tucorreo@ejemplo.com"
-                className="w-full rounded-3xl border border-slate-700 bg-slate-950/70 px-4 py-3 text-slate-100 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-400/20"
+                className="w-full rounded-3xl border border-slate-700 bg-slate-950/70 px-4 py-3 text-slate-100 outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20"
                 required
               />
             </label>
@@ -87,7 +87,7 @@ export default function RegisterPage() {
                 name="password"
                 type="password"
                 placeholder="Contraseña segura"
-                className="w-full rounded-3xl border border-slate-700 bg-slate-950/70 px-4 py-3 text-slate-100 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-400/20"
+                className="w-full rounded-3xl border border-slate-700 bg-slate-950/70 px-4 py-3 text-slate-100 outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20"
                 required
               />
             </label>
@@ -95,7 +95,7 @@ export default function RegisterPage() {
               <span>Rol</span>
               <select
                 name="role"
-                className="w-full rounded-3xl border border-slate-700 bg-slate-950/70 px-4 py-3 text-slate-100 outline-none transition focus:border-violet-400 focus:ring-2 focus:ring-violet-400/20"
+                className="w-full rounded-3xl border border-slate-700 bg-slate-950/70 px-4 py-3 text-slate-100 outline-none transition focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20"
               >
                 <option value="FREELANCER">Freelancer</option>
                 <option value="EMPRESA">Empresa</option>
@@ -104,14 +104,14 @@ export default function RegisterPage() {
             {error && <p className="text-sm text-rose-400">{error}</p>}
             <button
               type="submit"
-              className="w-full rounded-3xl bg-violet-500 px-5 py-3 text-base font-semibold text-white transition hover:bg-violet-400"
+              className="w-full rounded-3xl bg-emerald-500 px-5 py-3 text-base font-semibold text-white transition hover:bg-emerald-400"
             >
               Crear cuenta
             </button>
           </form>
           <p className="mt-6 text-center text-sm text-slate-400">
             ¿Ya tienes cuenta?{' '}
-            <Link href="/login" className="font-semibold text-white hover:text-violet-300">
+            <Link href="/login" className="font-semibold text-white hover:text-emerald-300">
               Inicia sesión
             </Link>
           </p>
