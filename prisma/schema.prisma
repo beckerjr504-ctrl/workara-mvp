@@ -8,16 +8,36 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
+  id        String    @id @default(cuid())
   name      String?
-  email     String   @unique
+  email     String    @unique
   password  String?
-  role      Role     @default(FREELANCER)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  role      Role      @default(FREELANCER)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  projects  Project[]
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  budget      Float
+  category    String
+  status      Status   @default(OPEN)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
 }
 
 enum Role {
   FREELANCER
   EMPRESA
+}
+
+enum Status {
+  OPEN
+  IN_PROGRESS
+  CLOSED
 }
